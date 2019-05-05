@@ -37,7 +37,7 @@ public:
 		H_YELLOW,	// 高輝度・黄色
 		H_WHITE,	// 高輝度・白色
 	};
-	void Draw( int x, int y, const char *c, bool isnewline = true );
+	void Draw( int x, int y, string c, bool isnewline = true );
 	void Draw( int x, int y, const int value, bool isnewline = true );
 
 	void Input( int x, int y, string *c );
@@ -45,7 +45,9 @@ public:
 
 	void SetColor( int fore, int back );
 
-	void Clear( int x, int y, const char *c, enColor f = enColor::H_WHITE, enColor b = enColor::H_WHITE );
+	void Clear( int x, int y, const char *c, enColor f = enColor::L_WHITE, enColor b = enColor::L_BLACK );
+
+	HANDLE GetHandle();
 
 private:
 	HANDLE m_hConStdOut;

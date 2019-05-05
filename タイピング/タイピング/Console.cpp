@@ -11,7 +11,7 @@ clsConsole::~clsConsole()
 	}
 }
 
-void clsConsole::Draw( int x, int y, const char *c, bool isnewline )
+void clsConsole::Draw( int x, int y, string c, bool isnewline )
 {
 	COORD coord;
 
@@ -71,4 +71,9 @@ void clsConsole::Clear( int x, int y, const char *c, enColor f , enColor b )
 {
 	SetColor( static_cast<int>(f), static_cast<int>(b) );
 	Draw ( x, y, c );
+}
+
+HANDLE clsConsole::GetHandle()
+{
+	return m_hConStdOut;
 }
