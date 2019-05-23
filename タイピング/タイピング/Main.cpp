@@ -5,7 +5,7 @@ int main()
 {
 	clsTyping*	pclsTyping;
 	pclsTyping = new clsTyping();
-
+   //あ
 	pclsTyping->GameMain();
 
 	delete pclsTyping;
